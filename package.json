@@ -1,0 +1,25 @@
+{
+  "name": "coursell",
+  "version": "1.0.0",
+  "description": "its a course selling website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhverma54321/Coursell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhverma54321/Coursell/issues"
+  },
+  "homepage": "https://github.com/rishabhverma54321/Coursell#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1"
+  }
+}
