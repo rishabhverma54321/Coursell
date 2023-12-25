@@ -2,10 +2,12 @@
   "name": "coursell",
   "version": "1.0.0",
   "description": "its a course selling website",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "start": "pm2 start dist/index.js",
+    "restart": "pm2 restart",
+    "stop": "pm2 stop "
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,20 @@
   },
   "homepage": "https://github.com/rishabhverma54321/Coursell#readme",
   "dependencies": {
+    "@100xdevs/common": "^1.0.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mongoose": "^5.11.97",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.3.1"
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
