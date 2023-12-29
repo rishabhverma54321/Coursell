@@ -7,6 +7,6 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true,     
     "outDir": "./dist",
-    "rootDir": "../course",                           /* Skip type checking all .d.ts files. */
+    "rootDir": "../server",                           /* Skip type checking all .d.ts files. */
   }
 }

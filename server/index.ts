@@ -13,7 +13,7 @@ console.log("dbconnect", DB_CONNECT)
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); 
 app.use(cors())
 app.use("/users",userRoute)
 app.use("/admin",adminRoute)
