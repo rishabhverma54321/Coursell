@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2 start dist/index.js",
     "restart": "pm2 restart",
-    "stop": "pm2 stop "
+    "stop": "pm2 stop dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
+    "pm2": "^5.3.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

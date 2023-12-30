@@ -10,6 +10,7 @@ const signupInput = z.object({
   password: z.string().min(4).max(20),
 });
 
+
 const loginInput = z.object({
   username: z.string().min(6).max(20),
   password: z.string().min(4).max(20),
@@ -23,6 +24,9 @@ const courseInput = z.object({
   published: z.boolean(),
 });
 
+type signupInput = z.infer<typeof signupInput>
+type loginInput = z.infer<typeof loginInput>
+type courseInput = z.infer<typeof courseInput>
 // Admin routes
 router.post("/signup", async (req, res) => {
   // logic to sign up admin

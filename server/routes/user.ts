@@ -15,6 +15,9 @@ const loginInput = z.object({
   password: z.string().min(4).max(20),
 });
 
+type signupInput = z.infer<typeof signupInput>
+type loginInput = z.infer<typeof loginInput>
+
 
 router.post("/signup", async (req, res) => {
   const parsedsignupInput = signupInput.safeParse(req.body);
