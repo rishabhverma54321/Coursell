@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/rishabhverma54321/Coursell#readme",
   "dependencies": {
-    "@100xdevs/common": "^1.0.2",
+    "@rishabhmandawariya/common": "^1.0.3",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.2",

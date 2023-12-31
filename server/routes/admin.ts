@@ -2,31 +2,32 @@ import express from "express";
 import { Admin, Courses, User } from "../db";
 import { z } from "zod";
 import { authenticationJwt, generateJwtToken } from "../middleware";
+import { signupInput, loginInput, courseInput } from "@rishabhmandawariya/common";
 
 const router = express.Router();
 
-const signupInput = z.object({
-  username: z.string().min(6).max(20),
-  password: z.string().min(4).max(20),
-});
+// const signupInput = z.object({
+//   username: z.string().min(6).max(20),
+//   password: z.string().min(4).max(20),
+// });
 
 
-const loginInput = z.object({
-  username: z.string().min(6).max(20),
-  password: z.string().min(4).max(20),
-});
+// const loginInput = z.object({
+//   username: z.string().min(6).max(20),
+//   password: z.string().min(4).max(20),
+// });
 
-const courseInput = z.object({
-  title: z.string().min(2),
-  description: z.string().min(12),
-  price: z.number().min(1),
-  imageLink: z.string().min(4),
-  published: z.boolean(),
-});
+// const courseInput = z.object({
+//   title: z.string().min(2),
+//   description: z.string().min(12),
+//   price: z.number().min(1),
+//   imageLink: z.string().min(4),
+//   published: z.boolean(),
+// });
 
-type signupInput = z.infer<typeof signupInput>
-type loginInput = z.infer<typeof loginInput>
-type courseInput = z.infer<typeof courseInput>
+// type signupInput = z.infer<typeof signupInput>
+// type loginInput = z.infer<typeof loginInput>
+// type courseInput = z.infer<typeof courseInput>
 // Admin routes
 router.post("/signup", async (req, res) => {
   // logic to sign up admin
@@ -49,7 +50,7 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const parsedInput = loginInput.safeParse(req.headers);
+  const parsedInput = loginInput.safeParse(req.body);
   if (!parsedInput?.success) {
     res.status(411).json({
       msg: parsedInput.error,

@@ -2,21 +2,22 @@ import express from "express";
 import { User, Courses } from "../db";
 import { z } from "zod";
 import { generateJwtToken, authenticationJwt } from "../middleware";
+import { signupInput, loginInput } from "@rishabhmandawariya/common";
 
 const router = express.Router();
 
-const signupInput = z.object({
-  username: z.string().min(6).max(20),
-  password: z.string().min(4).max(20),
-});
+// const signupInput = z.object({
+//   username: z.string().min(6).max(20),
+//   password: z.string().min(4).max(20),
+// });
 
-const loginInput = z.object({
-  username: z.string().min(6).max(20),
-  password: z.string().min(4).max(20),
-});
+// const loginInput = z.object({
+//   username: z.string().min(6).max(20),
+//   password: z.string().min(4).max(20),
+// });
 
-type signupInput = z.infer<typeof signupInput>
-type loginInput = z.infer<typeof loginInput>
+// type signupInput = z.infer<typeof signupInput>
+// type loginInput = z.infer<typeof loginInput>
 
 
 router.post("/signup", async (req, res) => {
@@ -42,7 +43,7 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const parsedInput = loginInput.safeParse(req.headers);
+  const parsedInput = loginInput.safeParse(req.body);
   if (!parsedInput?.success) {
     res.status(411).json({
       msg: parsedInput.error,

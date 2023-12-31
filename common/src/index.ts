@@ -19,6 +19,6 @@ export const courseInput = z.object({
     published: z.boolean(),
   });
   
-export  type signupInput = z.infer<typeof signupInput>
-export  type loginInput = z.infer<typeof loginInput>
-export  type courseInput = z.infer<typeof courseInput>
+export  type signupInputPramas = z.infer<typeof signupInput>
+export  type loginInputParams = z.infer<typeof loginInput>
+export  type courseInputParams = z.infer<typeof courseInput>
