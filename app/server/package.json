@@ -1,5 +1,5 @@
 {
-  "name": "coursell",
+  "name": "server",
   "version": "1.0.0",
   "description": "its a course selling website",
   "main": "index.ts",
@@ -9,16 +9,8 @@
     "restart": "pm2 restart",
     "stop": "pm2 stop dist/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rishabhverma54321/Coursell.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rishabhverma54321/Coursell/issues"
-  },
-  "homepage": "https://github.com/rishabhverma54321/Coursell#readme",
   "dependencies": {
     "@rishabhmandawariya/common": "^1.0.3",
     "@types/cors": "^2.8.13",
